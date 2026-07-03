@@ -1,0 +1,195 @@
+/* style.css */
+/* Custom styling for the Fake News Detection Agent Dashboard */
+
+/* General Reset and Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #f8f9fa;
+    background-color: #020c1b;
+    overflow-x: hidden;
+}
+
+/* Background gradient wrapper */
+.background-radial-gradient {
+    background-color: #03001e;
+    background-image: radial-gradient(circle at 10% 20%, rgb(4, 12, 36) 0%, rgb(16, 37, 76) 45%, rgb(4, 12, 36) 90%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 1rem;
+}
+
+/* White 10% opacity utility card for inner sections */
+.bg-white-10 {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Warning/Danger 10% opacity card for alerts */
+.bg-danger-10 {
+    background: rgba(220, 53, 69, 0.12) !important;
+    border: 1px solid rgba(220, 53, 69, 0.25) !important;
+}
+
+/* Custom Textarea styling */
+.glass-textarea {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border-radius: 0.75rem;
+    padding: 1.2rem;
+    resize: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.glass-textarea:focus {
+    background: rgba(0, 0, 0, 0.35) !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
+    outline: none;
+}
+
+.glass-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Utility Text colors */
+.text-light-80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.text-light-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Background dark utility for progress bars */
+.bg-dark-50 {
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Button Customizations */
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-outline-light:hover {
+    color: #1e293b;
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/* Scrollbar Customization for History List */
+#historyList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#historyList::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+
+#historyList::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+
+#historyList::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* History item hover styles */
+.history-item {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(3px);
+}
+
+/* Animation classes */
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+    animation: slideLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-right {
+    animation: slideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2.5s infinite;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.95; }
+    50% { opacity: 0.7; }
+}
+
+/* Mobile Responsiveness adjustments */
+@media (max-width: 991.98px) {
+    .glass-textarea {
+        rows: 8;
+    }
+}
